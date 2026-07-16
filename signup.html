@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입 Form 실습</title>
+</head>
+<body>
+  <h1>회원가입 Form</h1>
+
+  <form action="#" method="get">
+    <p>
+      <label for="userName">이름</label><br>
+      <input type="text" id="userName" name="userName" placeholder="이름을 입력하세요">
+    </p>
+
+    <p>
+      <label for="userEmail">이메일</label><br>
+      <input type="email" id="userEmail" name="userEmail" placeholder="example@email.com">
+    </p>
+
+    <p>
+      <label for="userPassword">비밀번호</label><br>
+      <input type="password" id="userPassword" name="userPassword" placeholder="비밀번호를 입력하세요">
+    </p>
+
+    <p>관심 분야</p>
+    <p>
+      <label>
+        <input type="checkbox" name="interest" value="html">
+        HTML
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" name="interest" value="css">
+        CSS
+      </label>
+      <br>
+      <label>
+        <input type="checkbox" name="interest" value="javascript">
+        JavaScript
+      </label>
+    </p>
+
+    <button type="submit">가입하기</button>
+    <button type="reset">다시 작성</button>
+  </form>
+
+  <p>
+    <a href="index.html">메인으로 돌아가기</a>
+  </p>
+</body>
+</html>
