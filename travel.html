@@ -2,51 +2,139 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>여행지 Hub</title>
+  <meta name="description" content="부산, 제주, 오사카 여행지를 소개하는 페이지">
+  <meta name="author" content="김지민">
+  <title>여행지 소개 페이지</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header>
-    <h1>나의 여행지 Hub</h1>
-    <p>가보고 싶은 여행지를 소개하는 페이지입니다.</p>
+<body class="travel-page">
+  <header id="top" class="travel-hero">
+    <nav class="travel-nav">
+      <a class="nav-brand" href="#top">Travel Note</a>
+      <a href="#about">소개</a>
+      <a href="#gallery">명소</a>
+      <a href="#food">먹거리</a>
+      <a href="#video">영상</a>
+      <a href="index.html">메인</a>
+    </nav>
+
+    <div class="hero-text">
+      <p class="section-label hero-label">BUSAN · JEJU · OSAKA</p>
+      <h1>나의 여행지 소개</h1>
+      <a class="hero-button" href="#gallery">여행지 둘러보기</a>
+    </div>
   </header>
 
-  <div class="travel-list">
-    <section class="travel-card">
-      <h2>부산</h2>
-      <img src="images/Busan.png" alt="부산 바다 풍경" width="400">
-      <p>부산은 바다, 야경, 먹거리를 함께 즐길 수 있는 국내 여행지입니다.</p>
-      <ul>
-        <li>추천 이유: 바다와 야경</li>
-        <li>가보고 싶은 곳: 해운대</li>
-        <li>먹어보고 싶은 음식: 밀면</li>
-      </ul>
+  <main>
+    <section id="about" class="travel-section about-section">
+      <div>
+        <p class="section-label">TRAVEL PLAN</p>
+        <h2>세 도시를 비교하며 고른 여행 후보</h2>
+      </div>
     </section>
 
-    <section class="travel-card">
-      <h2>제주</h2>
-      <img src="images/Jeju.png" alt="제주 자연 풍경" width="400">
-      <p>제주는 자연 경치가 좋고 여유롭게 쉬어가기 좋은 여행지입니다.</p>
-      <ul>
-        <li>추천 이유: 자연 풍경</li>
-        <li>가보고 싶은 곳: 성산일출봉</li>
-        <li>먹어보고 싶은 음식: 흑돼지</li>
-      </ul>
+    <section id="gallery" class="travel-section">
+      <p class="section-label">MUST VISIT</p>
+      <h2>가보고 싶은 명소</h2>
+      <p>사진과 설명을 함께 보면서 여행지를 비교해봅니다.</p>
+
+      <div class="travel-gallery">
+        <figure class="place-card">
+          <div class="place-image">
+            <img src="images/Busan.png" alt="부산 바다와 도시 풍경">
+            <span>01</span>
+          </div>
+          <figcaption>
+            <strong>부산</strong>
+            <p>바다와 야경을 함께 볼 수 있는 국내 여행지입니다.</p>
+            <small>해운대 · 광안리 · 밀면</small>
+          </figcaption>
+        </figure>
+
+        <figure class="place-card">
+          <div class="place-image">
+            <img src="images/Jeju.png" alt="제주 자연과 바다 풍경">
+            <span>02</span>
+          </div>
+          <figcaption>
+            <strong>제주</strong>
+            <p>자연 풍경이 좋고 천천히 쉬어가기 좋은 여행지입니다.</p>
+            <small>성산일출봉 · 바다 · 흑돼지</small>
+          </figcaption>
+        </figure>
+
+        <figure class="place-card">
+          <div class="place-image">
+            <img src="images/Osaka.jpg" alt="오사카 도심 거리 풍경">
+            <span>03</span>
+          </div>
+          <figcaption>
+            <strong>오사카</strong>
+            <p>음식과 쇼핑, 도시 분위기를 즐기기 좋은 여행지입니다.</p>
+            <small>도톤보리 · 타코야키 · 쇼핑</small>
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section class="travel-card">
-      <h2>오사카</h2>
-      <img src="images/Osaka.jpg" alt="오사카 도시 거리 풍경" width="400">
-      <p>오사카는 맛있는 음식과 다양한 볼거리가 많은 일본 여행지입니다.</p>
-      <ul>
-        <li>추천 이유: 음식과 쇼핑</li>
-        <li>가보고 싶은 곳: 도톤보리</li>
-        <li>먹어보고 싶은 음식: 타코야키</li>
-      </ul>
+    <section id="food" class="travel-section food-layout">
+      <article>
+        <p class="section-label">TASTE LIST</p>
+        <h2>여행지별 먹거리</h2>
+
+        <div class="food-list">
+          <strong>01</strong>
+          <span>
+            <b>부산</b>
+            밀면, 돼지국밥, 어묵처럼 지역 느낌이 나는 음식먹기
+          </span>
+        </div>
+
+        <div class="food-list">
+          <strong>02</strong>
+          <span>
+            <b>제주</b>
+            흑돼지, 고기국수, 감귤 디저트처럼 제주에서 더 특별하게 느껴지는 음식먹기
+          </span>
+        </div>
+
+        <div class="food-list">
+          <strong>03</strong>
+          <span>
+            <b>오사카</b>
+            타코야키, 오코노미야키, 라멘처럼 일본의 향이 느껴지는 음식 먹기
+          </span>
+        </div>
+      </article>
+
+      <aside class="travel-tip">
+        <p class="section-label">TRAVEL TIP</p>
+        <h2>여행 팁</h2>
+        <ul>
+          <li>사진을 찍을 장소를 미리 찾아보기</li>
+          <li>날씨에 맞춰 이동 계획 세우기</li>
+          <li>먹거리 후보를 2~3개 정도 정해두기</li>
+        </ul>
+      </aside>
     </section>
-  </div>
-  <p>
-    <a href="index.html">메인으로 돌아가기</a>
-  </p>
+
+    <section id="video" class="travel-section">
+      <p class="section-label">TRAVEL VIDEO</p>
+      <h2>영상</h2>
+
+      <figure class="video-box">
+        <video class="travel-video" controls poster="images/Osaka.jpg">
+          <source src="media/Osaka.mp4" type="video/mp4">
+          브라우저가 video 태그를 지원하지 않습니다.
+        </video>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="travel-footer">
+    <p>HTML 시맨틱 태그와 미디어 태그를 활용한 여행지 소개 페이지입니다.</p>
+    <a class="link-button" href="#top">맨 위로</a>
+    <a class="link-button" href="index.html">메인으로 돌아가기</a>
+  </footer>
 </body>
 </html>

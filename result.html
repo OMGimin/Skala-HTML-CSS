@@ -7,13 +7,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>회원가입 결과</h1>
+    <header class="fixed-header">
+        <h1>회원가입 결과</h1>
+    </header>
+
+    <div class="form-page form-card">
     <p>입력한 회원 정보를 확인해주세요.</p>
 
-    <table border="1">
+    <table class="result-table" border="1">
         <tr>
             <th>이름</th>
             <td id="userName"></td>
+        </tr>
+        <tr>
+            <th>아이디</th>
+            <td id="userId"></td>
+        </tr>
+        <tr>
+            <th>비밀번호</th>
+            <td id="userPassword"></td>
         </tr>
         <tr>
             <th>이메일</th>
@@ -22,6 +34,10 @@
         <tr>
             <th>전화번호</th>
             <td id="userPhone"></td>
+        </tr>
+        <tr>
+            <th>생년월일</th>
+            <td id="birthDate"></td>
         </tr>
         <tr>
             <th>성별</th>
@@ -39,14 +55,19 @@
             <th>자기소개</th>
             <td id="memo"></td>
         </tr>
+        <tr>
+            <th>약관동의</th>
+            <td id="agree"></td>
+        </tr>
     </table>
 
     <p>
-        <a href="signup.html">다시 작성하기</a>
+        <a class="link-button" href="signup.html">다시 작성하기</a>
     </p>
     <p>
-        <a href="index.html">메인으로 돌아가기</a>
+        <a class="link-button" href="index.html">메인으로 돌아가기</a>
     </p>
+    </div>
 
     <script src="js/result.js"></script>
 </body>

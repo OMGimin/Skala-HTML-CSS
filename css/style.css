@@ -1,11 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: rgb(12, 121, 223);
+  --dark-main: rgb(7, 92, 175);
+  --bg-color: #f3f7fb;
+  --card-color: #ffffff;
+  --text-color: #202124;
+  --border-color: #d9e2ec;
+  --shadow-color: rgba(15, 23, 42, 0.12);
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, "맑은 고딕", sans-serif;
   margin: 20px;
   background-color: #f7f7f7;
 }
 
+input,
+button,
+select,
+textarea,
+table {
+  font-family: inherit;
+}
+
 h1 {
-  color: darkblue;
+  color: rgb(12, 121, 223);
 }
 
 h2 {
@@ -17,9 +39,9 @@ p {
 }
 
 .page-title {
-  background-color: #dde8ff;
+  background-color: #e7f2ff;
   padding: 15px;
-  border: 1px solid #aac0e8;
+  border: 1px solid rgb(12, 121, 223);
 }
 
 #main-menu {
@@ -48,7 +70,7 @@ p {
 }
 
 .travel-card:hover {
-  background-color: #eef6ff;
+  background-color: #e7f2ff;
 }
 
 @media screen and (max-width: 700px) {
@@ -60,4 +82,949 @@ p {
 .highlight {
   color: crimson;
   font-weight: bold;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(12, 121, 223);
+  color: white;
+  padding: 15px;
+  z-index: 10;
+}
+
+.fixed-header h1 {
+  color: white;
+  margin: 0;
+}
+
+.form-page {
+  margin-top: 90px;
+}
+
+.form-card {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: 1px solid #cccccc;
+  padding: 20px;
+}
+
+fieldset {
+  border: 1px solid #cccccc;
+  padding: 15px;
+  margin-bottom: 18px;
+}
+
+legend {
+  color: rgb(12, 121, 223);
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  padding: 8px;
+  border: 1px solid #bbbbbb;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgb(12, 121, 223);
+  background-color: #e7f2ff;
+}
+
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.result-table th,
+.result-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.result-table th {
+  width: 140px;
+  background-color: #e7f2ff;
+}
+
+button {
+  background-color: rgb(12, 121, 223);
+  color: white;
+  border: 1px solid rgb(12, 121, 223);
+  padding: 8px 12px;
+}
+
+button:hover {
+  background-color: rgb(7, 92, 175);
+}
+
+.btn-primary {
+  font-weight: bold;
+}
+
+.link-button {
+  display: inline-block;
+  background-color: rgb(12, 121, 223);
+  color: white;
+  border: 1px solid rgb(12, 121, 223);
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.link-button:hover {
+  background-color: rgb(7, 92, 175);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.home-page {
+  margin: 0;
+  color: #202124;
+  background-color: #f3f7fb;
+}
+
+.home-hero {
+  min-height: 520px;
+  background-image: linear-gradient(90deg, rgba(0, 37, 77, 0.88), rgba(0, 86, 156, 0.55), rgba(0, 37, 77, 0.2)), url("../images/Jeju.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.home-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: rgb(12, 121, 223);
+  padding: 14px 24px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.home-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+}
+
+.home-nav a:hover {
+  text-decoration: underline;
+}
+
+.home-hero-text {
+  max-width: 900px;
+  padding: 170px 50px 90px;
+}
+
+.home-hero-text h1 {
+  color: white;
+  font-size: 52px;
+  margin-bottom: 12px;
+}
+
+.home-hero-text p {
+  max-width: 680px;
+  font-size: 18px;
+}
+
+.home-section {
+  max-width: 1000px;
+  margin: 52px auto;
+  padding: 32px;
+  background-color: white;
+  border: 1px solid #d9e2ec;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.intro-layout,
+.plan-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.intro-card,
+.github-card {
+  background-color: #e7f2ff;
+  border: 1px solid #b8d9f8;
+  padding: 22px;
+}
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.practice-card {
+  border: 1px solid #d9e2ec;
+  background-color: white;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.practice-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.16);
+}
+
+.practice-card span {
+  display: inline-block;
+  color: rgb(12, 121, 223);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.practice-card h3 {
+  margin: 4px 0 8px;
+}
+
+.home-footer {
+  text-align: center;
+  background-color: #20354f;
+  color: white;
+  padding: 24px;
+}
+
+.travel-page {
+  margin: 0;
+  color: #202124;
+  background-color: #f3f7fb;
+}
+
+.travel-hero {
+  min-height: 520px;
+  background-image: linear-gradient(90deg, rgba(0, 37, 77, 0.82), rgba(0, 37, 77, 0.42), rgba(0, 37, 77, 0.1)), url("../images/Busan.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.travel-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: rgb(12, 121, 223);
+  padding: 14px 24px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.nav-brand {
+  float: left;
+  letter-spacing: 0.08em;
+}
+
+.travel-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+}
+
+.travel-nav a:hover {
+  text-decoration: underline;
+}
+
+.hero-text {
+  max-width: 900px;
+  margin: 0;
+  padding: 170px 50px 90px;
+}
+
+.hero-text h1 {
+  color: white;
+  font-size: 54px;
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  max-width: 640px;
+  font-size: 18px;
+}
+
+.hero-label {
+  color: #bfe4ff;
+}
+
+.hero-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 18px;
+  color: white;
+  border: 1px solid white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-button:hover {
+  background-color: white;
+  color: rgb(12, 121, 223);
+}
+
+.travel-section {
+  max-width: 1000px;
+  margin: 52px auto;
+  padding: 32px;
+  background-color: white;
+  border: 1px solid #d9e2ec;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.about-section {
+  text-align: center;
+}
+
+.section-label {
+  margin: 0 0 8px;
+  color: rgb(12, 121, 223);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.14em;
+}
+
+.travel-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.place-card {
+  margin: 0;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.place-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.16);
+}
+
+.place-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.place-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: 0.3s;
+}
+
+.place-card:hover .place-image img {
+  transform: scale(1.06);
+}
+
+.place-image span {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(12, 121, 223);
+  padding: 5px 9px;
+  font-weight: bold;
+}
+
+.place-card figcaption {
+  padding: 18px;
+  line-height: 1.5;
+}
+
+.place-card strong {
+  display: block;
+  color: rgb(12, 121, 223);
+  margin-bottom: 6px;
+}
+
+.place-card small {
+  color: #5b6673;
+  font-weight: bold;
+}
+
+.food-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 22px;
+}
+
+.travel-tip {
+  background-color: #20354f;
+  color: white;
+  padding: 24px;
+}
+
+.travel-tip h2 {
+  color: white;
+}
+
+.travel-tip .section-label {
+  color: #bfe4ff;
+}
+
+.food-list {
+  display: flex;
+  gap: 18px;
+  padding: 18px 0;
+  border-top: 1px solid #d9e2ec;
+}
+
+.food-list strong {
+  color: rgb(12, 121, 223);
+}
+
+.food-list span {
+  display: block;
+}
+
+.food-list b {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.travel-video {
+  width: 100%;
+  height: 520px;
+  border: 0;
+  background-color: #000000;
+}
+
+.video-box {
+  margin: 0;
+}
+
+.video-box figcaption {
+  margin-top: 8px;
+  color: #5b6673;
+}
+
+.travel-footer {
+  text-align: center;
+  background-color: #20354f;
+  color: white;
+  padding: 24px;
+}
+
+@media screen and (max-width: 800px) {
+  .practice-grid,
+  .intro-layout,
+  .plan-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .home-nav a {
+    display: inline-block;
+    margin: 4px 8px;
+  }
+
+  .home-hero-text {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .home-hero-text h1 {
+    font-size: 32px;
+  }
+
+  .travel-gallery,
+  .food-layout,
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-nav a {
+    display: inline-block;
+    margin: 4px 8px;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .travel-video {
+    height: 300px;
+  }
+}
+
+.products-page {
+  margin: 0;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.products-page.dark {
+  --bg-color: #111827;
+  --card-color: #1f2937;
+  --text-color: #f9fafb;
+  --border-color: #374151;
+  --shadow-color: rgba(0, 0, 0, 0.35);
+}
+
+.product-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 28px;
+  background-color: var(--card-color);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 15;
+}
+
+.product-logo {
+  color: var(--main-color);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.product-menu {
+  margin-left: auto;
+}
+
+.product-menu a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: bold;
+}
+
+.product-menu a:hover {
+  color: var(--main-color);
+}
+
+.dark-toggle {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.product-hero {
+  max-width: 1100px;
+  margin: 52px auto 24px;
+  padding: 34px;
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 30px var(--shadow-color);
+  animation: showProduct 0.5s ease both;
+}
+
+.product-hero h1 {
+  color: var(--main-color);
+  margin-bottom: 10px;
+  animation: heroUp 0.55s ease backwards;
+  animation-delay: 0.15s;
+}
+
+.product-subtitle {
+  margin: 0;
+  animation: heroUp 0.55s ease backwards;
+  animation-delay: 0.35s;
+}
+
+.product-section {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  padding: 0 0 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.product-card {
+  position: relative;
+  top: 0;
+  background-color: var(--card-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: 0 10px 24px var(--shadow-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: cardEnter 0.65s ease backwards;
+}
+
+.product-card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.product-card:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.product-card:nth-child(4) {
+  animation-delay: 0.24s;
+}
+
+.product-card:nth-child(5) {
+  animation-delay: 0.32s;
+}
+
+.product-card:nth-child(6) {
+  animation-delay: 0.40s;
+}
+
+.product-card:nth-child(7) {
+  animation-delay: 0.48s;
+}
+
+.product-card:nth-child(8) {
+  animation-delay: 0.56s;
+}
+
+.product-card:nth-child(9) {
+  animation-delay: 0.64s;
+}
+
+.product-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 42px var(--shadow-color);
+  border-color: var(--main-color);
+}
+
+.product-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.product-card:hover img {
+  transform: scale(1.06);
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h2 {
+  color: var(--text-color);
+  margin: 8px 0;
+}
+
+.product-info strong {
+  display: block;
+  margin-top: 14px;
+  color: var(--main-color);
+}
+
+.product-tag {
+  color: var(--main-color);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.product-footer {
+  text-align: center;
+  padding: 24px;
+  background-color: #20354f;
+  color: white;
+}
+
+@keyframes showProduct {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    top: 24px;
+  }
+
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes heroUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-hero,
+  .product-hero h1,
+  .product-subtitle,
+  .product-card {
+    animation: none;
+  }
+
+  .product-card,
+  .product-card img {
+    transition: none;
+  }
+}
+
+.todo-page {
+  margin: 0;
+  background-color: #f3f7fb;
+  color: #202124;
+}
+
+.todo-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  padding: 16px 8%;
+  background-color: white;
+  border-bottom: 1px solid #d9e2ec;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.todo-logo {
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.todo-menu {
+  margin-left: auto;
+}
+
+.todo-menu a {
+  color: #333333;
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: bold;
+}
+
+.todo-menu a:hover {
+  color: var(--main-color);
+}
+
+.todo-main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 54px 20px 30px;
+}
+
+.todo-hero {
+  margin-bottom: 24px;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid #d9e2ec;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+}
+
+.todo-hero h1 {
+  margin-top: 6px;
+  margin-bottom: 12px;
+  color: var(--main-color);
+}
+
+.quote-text {
+  margin-top: 18px;
+  padding: 14px 16px;
+  background-color: #e7f2ff;
+  border-left: 5px solid var(--main-color);
+  font-weight: bold;
+}
+
+.todo-panel {
+  padding: 24px;
+  background-color: white;
+  border: 1px solid #d9e2ec;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+}
+
+.todo-input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-input-row input {
+  flex: 1;
+  padding: 13px;
+  border: 1px solid #cccccc;
+  font-size: 16px;
+}
+
+.todo-input-row input:focus {
+  outline: none;
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(12, 121, 223, 0.15);
+}
+
+.todo-summary {
+  display: flex;
+  gap: 10px;
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+
+.todo-summary span {
+  padding: 8px 12px;
+  background-color: #f3f7fb;
+  border: 1px solid #d9e2ec;
+  font-weight: bold;
+}
+
+.todo-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filter-button {
+  background-color: white;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+.filter-button.active,
+.filter-button:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.todo-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 14px;
+  background-color: #f9fbfd;
+  border: 1px solid #d9e2ec;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.todo-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--main-color);
+}
+
+.todo-item label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.todo-item.done span {
+  color: #777777;
+  text-decoration: line-through;
+}
+
+.delete-button {
+  background-color: #ffffff;
+  color: #d93025;
+  border: 1px solid #d93025;
+}
+
+.delete-button:hover {
+  background-color: #d93025;
+  color: white;
+}
+
+.todo-footer {
+  text-align: center;
+  padding: 28px;
+  background-color: #20354f;
+}
+
+@media screen and (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .product-menu {
+    display: none;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-header {
+    padding: 14px 18px;
+  }
+
+  .product-hero,
+  .product-section {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .todo-header {
+    display: block;
+    padding: 14px 20px;
+  }
+
+  .todo-menu {
+    margin-top: 10px;
+  }
+
+  .todo-menu a {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+
+  .todo-input-row {
+    flex-direction: column;
+  }
+
+  .todo-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }

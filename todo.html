@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JavaScript 모듈과 localStorage를 활용한 할 일 관리 앱">
+  <meta name="author" content="김지민">
+  <title>인터랙티브 할 일 관리 앱</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="todo-page">
+  <header id="top" class="todo-header">
+    <a class="todo-logo" href="index.html">Todo App</a>
+    <nav class="todo-menu">
+      <a href="#todoList">목록</a>
+      <a href="products.html">상품 갤러리</a>
+      <a href="index.html">메인</a>
+    </nav>
+  </header>
+
+  <main class="todo-main">
+    <section class="todo-hero">
+      <p class="section-label">LOCAL STORAGE · MODULE</p>
+      <h1>인터랙티브 할 일 관리 앱</h1>
+      <p>할 일을 추가하고 완료 처리, 삭제, 필터링을 할 수 있습니다. 새로고침해도 localStorage에 저장됩니다.</p>
+      <p id="quoteText" class="quote-text">오늘의 한마디를 불러오는 중입니다...</p>
+    </section>
+
+    <section class="todo-panel">
+      <div class="todo-input-row">
+        <input type="text" id="todoInput" placeholder="할 일을 입력하세요">
+        <button id="addTodoButton" type="button">추가</button>
+      </div>
+
+      <div class="todo-summary">
+        <span id="totalCount">전체 0개</span>
+        <span id="activeCount">진행중 0개</span>
+        <span id="doneCount">완료 0개</span>
+      </div>
+
+      <div class="todo-filters">
+        <button class="filter-button active" type="button" data-filter="all">전체</button>
+        <button class="filter-button" type="button" data-filter="active">진행중</button>
+        <button class="filter-button" type="button" data-filter="done">완료</button>
+      </div>
+
+      <ul id="todoList" class="todo-list"></ul>
+    </section>
+  </main>
+
+  <footer class="todo-footer">
+    <a class="link-button" href="#top">맨 위로</a>
+    <a class="link-button" href="index.html">메인으로 돌아가기</a>
+  </footer>
+
+  <script type="module" src="js/todo.js"></script>
+</body>
+</html>

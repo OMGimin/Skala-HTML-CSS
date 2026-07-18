@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS Grid와 반응형을 활용한 상품 카드 갤러리">
+  <meta name="author" content="김지민">
+  <title>반응형 상품 카드 갤러리</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="products-page">
+  <header id="top" class="product-header">
+    <a class="product-logo" href="index.html">SKALA Shop</a>
+
+    <nav class="product-menu">
+      <a href="#gallery">상품</a>
+      <a href="travel.html">여행지</a>
+      <a href="signup.html">회원가입</a>
+    </nav>
+
+    <button id="darkModeButton" class="dark-toggle" type="button">다크모드</button>
+  </header>
+
+  <main>
+    <section class="product-hero">
+      <p class="section-label">RESPONSIVE GRID</p>
+      <h1>반응형 상품 카드 갤러리</h1>
+      <p class="product-subtitle">여행지를 상품 카드 형태로 정리하고, 화면 크기에 따라 카드 열 수가 바뀝니다.</p>
+    </section>
+
+    <section id="gallery" class="product-section">
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="images/Busan.png" alt="부산 여행 패키지 이미지">
+          <div class="product-info">
+            <span class="product-tag">Travel</span>
+            <h2>부산 바다 패키지</h2>
+            <p>바다와 야경을 함께 즐기는 주말 여행 상품입니다.</p>
+            <strong>129,000원</strong>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/Jeju.png" alt="제주 여행 패키지 이미지">
+          <div class="product-info">
+            <span class="product-tag">Nature</span>
+            <h2>제주 힐링 패키지</h2>
+            <p>자연 풍경을 천천히 즐기는 휴식형 여행 상품입니다.</p>
+            <strong>199,000원</strong>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/Osaka.jpg" alt="오사카 여행 패키지 이미지">
+          <div class="product-info">
+            <span class="product-tag">City</span>
+            <h2>오사카 먹거리 투어</h2>
+            <p>도톤보리와 현지 음식을 중심으로 구성한 상품입니다.</p>
+            <strong>329,000원</strong>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/busan_gwanganli.jpg" alt="부산 광안리 야경 상품 이미지">
+          <div class="product-info">
+            <span class="product-tag">Night</span>
+            <h2>부산 야경 코스</h2>
+            <p>광안리와 해운대 야경을 둘러보는 코스입니다.</p>
+            <strong>79,000원</strong>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/jeju02.jpg" alt="제주 감성 여행 이미지">
+          <div class="product-info">
+            <span class="product-tag">Photo</span>
+            <h2>제주 감성 사진 코스</h2>
+            <p>사진 찍기 좋은 장소를 중심으로 구성했습니다.</p>
+            <strong>149,000원</strong>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/osaka_shopping.jpg" alt="오사카 쇼핑 여행 이미지">
+          <div class="product-info">
+            <span class="product-tag">Shopping</span>
+            <h2>오사카 쇼핑 코스</h2>
+            <p>쇼핑과 먹거리를 함께 즐기는 자유 여행 상품입니다.</p>
+            <strong>289,000원</strong>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/seoul.jpg" alt="서울 도심 여행 상품 이미지">
+          <div class="product-info">
+            <span class="product-tag">Seoul</span>
+            <h2>서울 도심 산책 코스</h2>
+            <p>궁궐, 한강, 도심 야경을 하루에 둘러보는 상품입니다.</p>
+            <strong>99,000원</strong>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/tokyo.jpg" alt="도쿄 감성 여행 상품 이미지">
+          <div class="product-info">
+            <span class="product-tag">Tokyo</span>
+            <h2>도쿄 감성 자유여행</h2>
+            <p>거리 구경, 카페, 쇼핑을 중심으로 즐기는 여행 상품입니다.</p>
+            <strong>349,000원</strong>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="images/bangkok.jpg" alt="방콕 야시장 여행 상품 이미지">
+          <div class="product-info">
+            <span class="product-tag">Bangkok</span>
+            <h2>방콕 야시장 투어</h2>
+            <p>야시장, 로컬 음식, 강변 풍경을 함께 즐기는 상품입니다.</p>
+            <strong>299,000원</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="product-footer">
+    <a class="link-button" href="#top">맨 위로</a>
+    <a class="link-button" href="index.html">메인으로 돌아가기</a>
+  </footer>
+
+  <script src="js/products.js"></script>
+</body>
+</html>

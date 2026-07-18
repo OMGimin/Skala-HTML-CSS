@@ -6,36 +6,54 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>회원가입 Form</h1>
+  <header class="fixed-header">
+    <h1>회원가입</h1>
+  </header>
 
+  <div class="form-page form-card">
   <form action="result.html" method="get">
+    <fieldset>
+      <legend>기본 정보</legend>
     <p>
       <label for="userName">이름</label><br>
-      <input type="text" id="userName" name="userName" placeholder="이름을 입력하세요">
+      <input type="text" id="userName" name="userName" placeholder="이름을 입력하세요" required>
+    </p>
+
+    <p>
+      <label for="userId">아이디</label><br>
+      <input type="text" id="userId" name="userId" placeholder="영문/숫자 4~12자" pattern="[A-Za-z0-9]{4,12}" minlength="4" maxlength="12" required>
     </p>
 
     <p>
       <label for="userEmail">이메일</label><br>
-      <input type="email" id="userEmail" name="userEmail" placeholder="example@email.com">
+      <input type="email" id="userEmail" name="userEmail" placeholder="example@email.com" required>
     </p>
 
     <p>
       <label for="userPassword">비밀번호</label><br>
-      <input type="password" id="userPassword" name="userPassword" placeholder="비밀번호를 입력하세요">
+      <input type="password" id="userPassword" name="userPassword" placeholder="8자 이상 입력하세요" minlength="8" required>
+    </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>추가 정보</legend>
+    <p>
+      <label for = "userPhone">전화번호</label><br>
+      <input type="tel" id="userPhone" name="userPhone" pattern="010-[0-9]{4}-[0-9]{4}" placeholder="010-1234-5678">
     </p>
 
     <p>
-      <label for = "userPhone">전화번호</label><br>
-      <input type="text" id="userPhone" name="userPhone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="010-1234-5678">
+      <label for="birthDate">생년월일</label><br>
+      <input type="date" id="birthDate" name="birthDate" min="1900-01-01" max="2026-07-18">
     </p>
 
     <p>
       <label>
-        <input type="radio" name="gender" value="male">
+        <input type="radio" name="gender" value="남자" required>
         남자
       </label>
       <label>
-        <input type="radio" name="gender" value="female">
+        <input type="radio" name="gender" value="여자">
         여자
       </label>
     </p>
@@ -43,24 +61,24 @@
     <p>관심 분야</p>
     <p>
       <label>
-        <input type="checkbox" name="interest" value="html">
+        <input type="checkbox" name="interest" value="HTML">
         HTML
       </label>
       <br>
       <label>
-        <input type="checkbox" name="interest" value="css">
+        <input type="checkbox" name="interest" value="CSS">
         CSS
       </label>
       <br>
       <label>
-        <input type="checkbox" name="interest" value="javascript">
+        <input type="checkbox" name="interest" value="JavaScript">
         JavaScript
       </label>
     </p>
 
     <p>
       <label for = "city">거주 지역</label><br>
-      <select id="city" name="city">
+      <select id="city" name="city" required>
         <option value="">선택하세요</option>
         <option value="서울">서울</option>
         <option value="부산">부산</option>
@@ -72,13 +90,30 @@
         <option value="기타">기타</option>
       </select>
     </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>자기소개</legend>
     <p>
       <label for="memo">자기소개</label><br>
-      <textarea id="memo" name="memo" rows="5" cols="40"></textarea>
+      <textarea id="memo" name="memo" rows="5" cols="40" maxlength="200" placeholder="간단한 자기소개를 작성하세요"></textarea>
+    </p>
+    </fieldset>
+
+    <p>
+      <label>
+        <input type="checkbox" id="agree" name="agree" value="동의함" required>
+        약관에 동의합니다.
+      </label>
     </p>
 
-    <button type="submit">가입하기</button>
+    <button class="btn-primary" type="submit">가입하기</button>
     <button type="reset">다시 작성</button>
   </form>
+
+  <p>
+    <a class="link-button" href="index.html">메인으로 돌아가기</a>
+  </p>
+  </div>
 </body>
 </html>
