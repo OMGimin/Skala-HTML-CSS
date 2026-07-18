@@ -7,7 +7,7 @@
 <body>
   <h1>회원가입 Form</h1>
 
-  <form action="#" method="get">
+  <form action="result.html" method="get">
     <p>
       <label for="userName">이름</label><br>
       <input type="text" id="userName" name="userName" placeholder="이름을 입력하세요">
@@ -21,6 +21,22 @@
     <p>
       <label for="userPassword">비밀번호</label><br>
       <input type="password" id="userPassword" name="userPassword" placeholder="비밀번호를 입력하세요">
+    </p>
+
+    <p>
+      <label for = "userPhone">전화번호</label><br>
+      <input type="text" id="userPhone" name="userPhone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="010-1234-5678">
+    </p>
+
+    <p>
+      <label>
+        <input type="radio" name="gender" value="male">
+        남자
+      </label>
+      <label>
+        <input type="radio" name="gender" value="female">
+        여자
+      </label>
     </p>
 
     <p>관심 분야</p>
@@ -41,12 +57,27 @@
       </label>
     </p>
 
+    <p>
+      <label for = "city">거주 지역</label><br>
+      <select id="city" name="city">
+        <option value="">선택하세요</option>
+        <option value="서울">서울</option>
+        <option value="부산">부산</option>
+        <option value="대구">대구</option>
+        <option value="인천">인천</option>
+        <option value="광주">광주</option>
+        <option value="대전">대전</option>
+        <option value="울산">울산</option>
+        <option value="기타">기타</option>
+      </select>
+    </p>
+    <p>
+      <label for="memo">자기소개</label><br>
+      <textarea id="memo" name="memo" rows="5" cols="40"></textarea>
+    </p>
+
     <button type="submit">가입하기</button>
     <button type="reset">다시 작성</button>
   </form>
-
-  <p>
-    <a href="index.html">메인으로 돌아가기</a>
-  </p>
 </body>
 </html>
