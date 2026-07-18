@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  color: darkblue;
+}
+
+h2 {
+  color: #333333;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.page-title {
+  background-color: #dde8ff;
+  padding: 15px;
+  border: 1px solid #aac0e8;
+}
+
+#main-menu {
+  background-color: white;
+  border: 1px solid #cccccc;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.travel-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.travel-card {
+  background-color: white;
+  border: 1px solid #cccccc;
+  padding: 15px;
+  width: 300px;
+  transition: 0.3s;
+}
+
+.travel-card img {
+  width: 100%;
+}
+
+.travel-card:hover {
+  background-color: #eef6ff;
+}
+
+@media screen and (max-width: 700px) {
+  .travel-list {
+    flex-direction: column;
+  }
+}
